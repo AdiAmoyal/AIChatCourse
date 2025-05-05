@@ -8,8 +8,35 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var showSettingsView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Text("Profile")
+                .navigationTitle("Profile")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        settignsButton
+                    }
+                }
+        }
+        .sheet(isPresented: $showSettingsView) {
+            SettingsView()
+        }
+    }
+    
+    private var settignsButton: some View {
+        Button {
+            onSettingsButtonPressed()
+        } label: {
+            Image(systemName: "gear")
+                .font(.headline)
+        }
+    }
+    
+    private func onSettingsButtonPressed() {
+        showSettingsView = true
     }
 }
 
