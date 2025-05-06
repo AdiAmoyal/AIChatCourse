@@ -46,7 +46,7 @@ struct WelcomeView: View {
                 OnboardingIntroView()
             } label: {
                 Text("Get Started")
-                    .allToActionButton()
+                    .callToActionButton()
             }
             
             Text("Already have an account? Sign in!")

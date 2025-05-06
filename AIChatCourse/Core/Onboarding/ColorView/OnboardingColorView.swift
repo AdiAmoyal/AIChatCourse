@@ -63,7 +63,7 @@ struct OnboardingColorView: View {
             OnboardingCompletedView(selectedColor: selectedColor)
         } label: {
             Text("Continue")
-                .allToActionButton()
+                .callToActionButton()
         }
     }
 }

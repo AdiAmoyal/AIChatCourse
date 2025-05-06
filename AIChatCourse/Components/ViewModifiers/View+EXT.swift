@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func allToActionButton() -> some View {
+    func callToActionButton() -> some View {
         self
             .font(.headline)
             .foregroundStyle(.white)

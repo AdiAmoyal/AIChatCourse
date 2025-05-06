@@ -33,7 +33,7 @@ struct OnboardingIntroView: View {
                 OnboardingColorView()
             } label: {
                 Text("Continue")
-                    .allToActionButton()
+                    .callToActionButton()
             }
         }
         .padding(24)
