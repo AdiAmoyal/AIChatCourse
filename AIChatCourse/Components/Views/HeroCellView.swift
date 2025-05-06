@@ -67,7 +67,6 @@ struct HeroCellView: View {
             HeroCellView()
                 .frame(width: 200, height: 400)
             
-            
             HeroCellView(imageName: nil)
                 .frame(width: 300, height: 200)
             
