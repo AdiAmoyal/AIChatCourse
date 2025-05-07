@@ -27,7 +27,6 @@ struct ChatRowCellView: View {
             .frame(width: 50, height: 50)
             .clipShape(Circle())
             
-            
             VStack(alignment: .leading, spacing: 4) {
                 if let headline {
                     Text(headline)
@@ -44,13 +43,7 @@ struct ChatRowCellView: View {
             
             if hasNewChat {
                 Text("NEW")
-                    .font(.caption)
-                    .bold()
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 6)
-                    .background(Color.blue)
-                    .cornerRadius(6)
+                    .badgeButton()
             }
         }
         .padding(.vertical, 12)
