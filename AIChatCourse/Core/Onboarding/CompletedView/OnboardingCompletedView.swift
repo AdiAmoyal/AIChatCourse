@@ -35,19 +35,11 @@ struct OnboardingCompletedView: View {
     }
     
     private var ctaButton: some View {
-        ZStack {
-            if isCompletingProfileSetup {
-                ProgressView()
-                    .tint(.white)
-            } else {
-                Text("Finish")
-            }
-        }
-        .callToActionButton()
-        .anyButton(.press) {
-            onFinishButtonPressed()
-        }
-        .disabled(isCompletingProfileSetup)
+        AsyncCallToAcrionButton(
+            isLoading: isCompletingProfileSetup,
+            title: "Finish",
+            action: onFinishButtonPressed
+        )
     }
     
     func onFinishButtonPressed() {
