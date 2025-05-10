@@ -33,7 +33,7 @@ struct SettingsView: View {
     
     private var accountSection: some View {
         Section {
-            if isAnonymousUser{
+            if isAnonymousUser {
                 Text("Save & back-up account")
                     .rowFormatting()
                     .anyButton(.highlight) {
