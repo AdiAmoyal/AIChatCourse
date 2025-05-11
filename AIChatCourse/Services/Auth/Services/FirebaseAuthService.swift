@@ -10,11 +10,7 @@ import FirebaseAuth
 import SwiftUI
 import SignInAppleAsync
 
-extension EnvironmentValues {
-    @Entry var authService: FirebaseAuthServices = FirebaseAuthServices()
-}
-
-struct FirebaseAuthServices {
+struct FirebaseAuthService: AuthService {
     
     func getAuthenticatedUser() -> UserAuthInfo? {
         if let user = Auth.auth().currentUser {
@@ -96,4 +92,3 @@ extension AuthDataResult {
     }
     
 }
-
